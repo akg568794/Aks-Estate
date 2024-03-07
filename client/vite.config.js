@@ -3,6 +3,11 @@ import react from '@vitejs/plugin-react-swc'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  build: {
+    rollupOptions: {
+      external: ['swiper/react']
+    }
+  },
   server:{
     proxy:{
       '/api':{
