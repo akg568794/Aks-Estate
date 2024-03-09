@@ -1,5 +1,3 @@
-
-
 import { Link } from 'react-router-dom';
 import { MdLocationOn } from 'react-icons/md';
 
@@ -29,8 +27,8 @@ export default function ListingItem({ listing }) {
             {listing.description}
           </p>
           <p className='text-slate-500 mt-2 font-semibold '>
-            
-          ₹{listing.offer
+            $
+            {listing.offer
               ? listing.discountPrice.toLocaleString('en-US')
               : listing.regularPrice.toLocaleString('en-US')}
             {listing.type === 'rent' && ' / month'}
